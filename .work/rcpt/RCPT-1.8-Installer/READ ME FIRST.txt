@@ -1,7 +1,0 @@
-RCPT v1.8 - Windows desktop app
-1. Unzip this folder.
-2. Double-click "Install RCPT.bat" (internet needed once, ~110 MB: it downloads the Electron runtime from GitHub).
-3. RCPT.exe is created in %LocalAppData%\RCPT, with shortcuts on your Desktop and Start menu, and it launches.
-If Windows SmartScreen warns "unknown publisher" (the app is not code-signed): More info > Run anyway.
-To uninstall: delete %LocalAppData%\RCPT and the two RCPT shortcuts.
-Research prototype - not a medical device.

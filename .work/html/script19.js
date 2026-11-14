@@ -1,1 +1,0 @@
-document.getElementById("orionBtn").addEventListener("click",function(){if(window.Orion)window.Orion.open()})

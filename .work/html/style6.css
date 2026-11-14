@@ -1,4 +1,0 @@
-.tour-hl{outline:3px solid #ffd54a!important;outline-offset:3px;border-radius:8px;box-shadow:0 0 0 6px rgba(255,213,74,.18)!important}
-#tourBar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:80;width:min(760px,calc(100vw - 32px));background:rgba(3,7,12,.96);border:1px solid #ffd54a;border-radius:14px;padding:12px 16px;direction:rtl;text-align:right;color:#fff;font:600 1.02rem/1.7 'Segoe UI',Tahoma,sans-serif}
-#tourBar[hidden]{display:none}#tourBar .tc{display:flex;gap:6px;align-items:center;margin-top:8px;font-size:.78rem;color:#9fb4c8}#tourBar button{background:#12202f;color:#fff;border:1px solid #2b3f57;border-radius:8px;padding:4px 12px;cursor:pointer;font:inherit}
-#tourBar .pb{flex:1;height:4px;background:#1d2b3d;border-radius:2px;overflow:hidden}#tourBar .pb i{display:block;height:100%;background:#ffd54a;width:0}

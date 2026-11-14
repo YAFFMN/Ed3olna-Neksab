@@ -1,9 +1,0 @@
-{
-  "name": "rcpt-twin",
-  "productName": "RCPT",
-  "version": "1.8.0",
-  "description": "Radiation-Coupled Physiological Twin: offline-first deep-space health prototype (NASA Space Apps 2026)",
-  "author": "RCPT Team",
-  "main": "main.js",
-  "scripts": {}
-}
