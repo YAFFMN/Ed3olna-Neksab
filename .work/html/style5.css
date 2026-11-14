@@ -1,0 +1,31 @@
+/* v1.7 pitch enhancements: edge status bar, CDSS prescriptions, emergency simulator, report export */
+#edgeBar{position:sticky;top:-14px;z-index:6;display:flex;gap:8px;flex-wrap:wrap;background:rgba(5,9,15,.96);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.eb{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-radius:8px;padding:6px 10px;font-size:.74rem;flex:1 1 260px;border:1px solid}
+.eb i{width:10px;height:10px;border-radius:50%;flex:none}.eb b{font:700 .95rem ui-monospace,Consolas,monospace}.eb em{font-style:normal;opacity:.8;font-size:.68rem}
+.eb.r{background:rgba(255,93,77,.12);border-color:rgba(255,93,77,.5);color:#ffc2bb}.eb.r i{background:var(--bad);box-shadow:0 0 8px var(--bad)}
+.eb.g{background:rgba(53,208,138,.12);border-color:rgba(53,208,138,.5);color:#9af0c3}.eb.g i{background:var(--good);box-shadow:0 0 8px var(--good);animation:ebp 1.8s ease-in-out infinite alternate}
+.eb.c{background:rgba(23,169,240,.1);border-color:rgba(23,169,240,.45);color:#bfe6ff;flex:0 1 200px}
+@keyframes ebp{to{opacity:.4}}
+.rx{border:1px solid var(--line);border-radius:10px;background:rgba(10,15,22,.8);padding:14px 16px}
+.rx-h{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}.rx-h h5{margin:0}
+.rx-tag{font:700 .62rem 'Segoe UI',sans-serif;letter-spacing:.06em;padding:2px 9px;border-radius:999px;background:rgba(23,169,240,.18);color:#9fdcff}
+.rx-pri{margin-inline-start:auto;font:700 .72rem 'Segoe UI',sans-serif;padding:3px 10px;border-radius:999px}
+.p0{background:rgba(53,208,138,.2);color:#7be8a0}.p1,.p2{background:rgba(255,178,36,.2);color:#ffd27a}.p3{background:rgba(255,93,77,.25);color:#ffb0a8}
+.rx-i{display:flex;gap:10px;padding:9px 10px;border-radius:8px;margin:6px 0;background:#0b131e;border-inline-start:4px solid #35d08a;font-size:.82rem;line-height:1.45}
+.rx-i.p2,.rx-i.p1{border-color:#ffb224;background:#0b131e;color:inherit}.rx-i.p3{border-color:#ff5d4d;color:inherit;background:#0b131e}
+.rx-i .ic{font-size:1.25rem}.rx-i b{display:block}.rx-i small{color:#8fa0b4;font-size:.68rem}.rx-i p{margin:2px 0}
+.rx-f{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}.rx-f .fine{font-size:.68rem;color:var(--muted);flex:1 1 220px}
+.sx{display:grid;grid-template-columns:minmax(260px,1fr) minmax(300px,1.3fr) minmax(240px,.9fr);gap:16px;align-items:start}
+@media(max-width:1000px){.sx{grid-template-columns:1fr}}
+.sx .sl{display:grid;gap:4px;margin:10px 0}.sx .sl label{display:flex;justify-content:space-between;font-size:.82rem;color:#dbe7f5}.sx .sl b{font-variant-numeric:tabular-nums;color:#ffb224}
+.sx input[type=range]{width:100%;accent-color:#17a9f0}.sx .sl small{color:#8fa0b4;font-size:.68rem}
+.sx .fm{font:12px/1.75 ui-monospace,Consolas,monospace;color:#d9e8f8;background:#0f1a28;border-radius:8px;padding:10px 12px;overflow:auto;white-space:pre}
+.sx .fm span{transition:color .4s}.sx .fm .hot{color:#ffb224}
+.sx .gauge{position:relative;height:18px;border-radius:9px;background:linear-gradient(90deg,#35d08a 0 35%,#ffb224 35% 70%,#ff5d4d 70%);margin:8px 0 4px;opacity:.9}
+.sx .gauge i{position:absolute;top:-4px;width:4px;height:26px;background:#fff;border-radius:2px;transition:left .25s;box-shadow:0 0 6px #000}
+.sx .big{font:800 2.6rem/1 'Segoe UI',sans-serif;font-variant-numeric:tabular-nums}
+.sx .nova{max-height:190px;overflow:auto;display:grid;gap:6px;font-size:.78rem}
+.sx .nova div{background:#15202e;border:1px solid #243246;border-radius:10px;padding:7px 10px;line-height:1.4}.sx .nova div.t3{border-color:#ff5d4d}.sx .nova div.t2{border-color:#ffb224}.sx .nova div.t1{border-color:#35d08a}
+#sxAv svg{width:100%;max-width:180px;display:block;margin:0 auto}#sxAv [data-s]{transition:fill .35s,stroke .35s}
+.sx .chips2{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}.sx .chips2 span{font:600 .68rem 'Segoe UI',sans-serif;padding:2px 8px;border-radius:999px}
+.sx .chips2 .ok{background:rgba(53,208,138,.2);color:#7be8a0}.sx .chips2 .mid{background:rgba(255,178,36,.2);color:#ffd27a}.sx .chips2 .bad{background:rgba(255,93,77,.25);color:#ffb0a8}

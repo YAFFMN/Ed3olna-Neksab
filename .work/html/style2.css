@@ -1,0 +1,65 @@
+/* ORION atlas + game. Original design in the app's own space-console style. Motion is minimal and respects reduced-motion. */
+.or{position:fixed;inset:0;z-index:15;display:flex;flex-direction:column;background:radial-gradient(90% 60% at 20% -10%,rgba(232,135,58,.16),transparent 60%),radial-gradient(70% 50% at 100% 110%,rgba(23,169,240,.12),transparent 60%),#04080e;color:#f1f5fa;font-family:'Segoe UI',system-ui,sans-serif}
+.or[hidden]{display:none}
+.or-h{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:12px 20px;border-bottom:1px solid #1b2634;background:rgba(5,9,15,.9)}
+.or-t{font:300 1.9rem/1 'Segoe UI',system-ui,sans-serif;letter-spacing:.55em;margin-right:-.55em;color:#fff}
+.or-st{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#e8873a;margin-top:6px}
+.or-layers{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.or-lb{background:#0c1521;color:#cfe0f2;border:1px solid #243449;border-radius:8px;padding:7px 13px;font:600 .78rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}
+.or-lb:hover{background:#12202f}.or-lb[aria-pressed=true]{background:#e8873a;color:#1a0d02;border-color:#e8873a}
+.or-opts{display:flex;gap:12px;font-size:.74rem;color:#a9b8c9}.or-opts label{display:flex;gap:5px;align-items:center;cursor:pointer}
+.or-x{background:transparent;color:#cfe0f2;border:1px solid #33445c;border-radius:8px;padding:7px 12px;font:600 .76rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}
+.or-x:hover{background:#12202f}
+.or-body{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:0}
+.or-mapcol{padding:14px 18px;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.or-frame{position:relative;width:100%;aspect-ratio:2/1;border:1px solid #2a3b52;border-radius:6px;overflow:hidden;background:#000;box-shadow:0 0 0 4px #070d15,0 0 0 5px #1b2a3c}
+.or-frame canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+#or-map{image-rendering:auto}
+#or-ov{cursor:crosshair;outline:none}#or-ov:focus-visible{outline:2px solid #fff;outline-offset:-3px}
+.or-tip{position:absolute;pointer-events:none;background:rgba(3,7,12,.92);border:1px solid #33445c;border-radius:6px;padding:5px 9px;font-size:.72rem;line-height:1.4;z-index:3;white-space:nowrap}
+.or-load{position:absolute;inset:0;display:grid;place-items:center;background:#04080e;color:#a9b8c9;font-size:.9rem;z-index:4}.or-load[hidden]{display:none}
+.or-legend{max-width:760px}
+.or-lt{font-size:.74rem;color:#cfe0f2;margin-bottom:4px;font-weight:600}.or-lt span{color:#8fa0b4;font-weight:400}
+.or-bar{height:11px;border-radius:3px;border:1px solid #2a3b52}
+.or-ticks{position:relative;height:16px;font-size:.66rem;color:#a9b8c9}.or-ticks span{position:absolute;transform:translateX(-50%);top:2px}
+.or-quick{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:.72rem;color:#8fa0b4}
+.or-quick button{background:#0c1521;color:#dcebfa;border:1px solid #243449;border-radius:999px;padding:4px 11px;font:600 .72rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}.or-quick button:hover{background:#17283b}
+.or-disc{font-size:.68rem;color:#7f90a4;margin:0;max-width:900px;line-height:1.45}
+.or-side{border-left:1px solid #1b2634;background:rgba(7,12,19,.92);display:flex;flex-direction:column;min-height:0}
+.or-tabs{display:flex;border-bottom:1px solid #1b2634}
+.or-tabs button{flex:1;background:transparent;color:#a9b8c9;border:0;border-bottom:2px solid transparent;padding:12px;font:600 .8rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}
+.or-tabs button[aria-selected=true]{color:#fff;border-bottom-color:#e8873a}
+.or-pane{flex:1;overflow:auto;padding:12px 14px 110px;display:flex;flex-direction:column;gap:10px}.or-pane[hidden]{display:none}
+.or-card{background:#0b131e;border:1px solid #1d2b3d;border-radius:10px;padding:12px 14px}
+.or-rn{font-size:1.15rem;font-weight:700;letter-spacing:.01em}.or-co{font-size:.74rem;color:#9fb1c5;margin:2px 0 8px}
+.or-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0}
+.or-stats div{background:#0f1a28;border-radius:7px;padding:7px 4px;text-align:center}.or-stats b{display:block;font-size:.86rem}.or-stats span{font-size:.62rem;color:#8fa0b4}
+.or-env{font-size:.8rem;line-height:1.5;color:#d6e2ef;margin:6px 0}.or-watch{font-size:.78rem;line-height:1.45;color:#ffd9a8;margin:6px 0 0;background:rgba(232,135,58,.1);border-radius:7px;padding:8px 10px}
+.or-rh{font-weight:700;font-size:.88rem;margin-bottom:8px}.or-rh span{font-weight:400;font-size:.7rem;color:#ff9a8f;margin-left:6px}
+.or-big{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.or-big div{background:#0f1a28;border-radius:7px;padding:8px 6px;text-align:center}.or-big b{display:block;font-size:1.25rem;color:#ffb03c}.or-big span{font-size:.64rem;color:#a9b8c9;line-height:1.3;display:block}
+.or-bud{height:7px;background:#16222f;border-radius:4px;margin-top:10px;overflow:hidden}.or-bud i{display:block;height:100%;background:linear-gradient(90deg,#35d08a,#ffb224,#ff5d4d)}
+.or-bl{font-size:.66rem;color:#8fa0b4;margin-top:4px}
+.or-hz{padding:7px 0;border-top:1px solid #16222f}.or-hz:first-of-type{border-top:0}
+.or-hk{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;font-weight:600}.or-ht{font-size:.74rem;line-height:1.45;color:#b9c8d9;margin-top:3px}
+.or-chip{font-size:.62rem;font-weight:700;padding:2px 8px;border-radius:999px;letter-spacing:.03em}
+.lv0,.lv1{background:rgba(53,208,138,.2);color:#7be8a0}.lv1{background:rgba(180,220,80,.2);color:#d3ec7a}.lv2{background:rgba(255,178,36,.2);color:#ffd27a}.lv3{background:rgba(255,93,77,.25);color:#ffb0a8}.or-chip.res{background:rgba(23,169,240,.22);color:#9fdcff}
+.or-fine{font-size:.66rem;color:#7f90a4;margin:8px 0 0;line-height:1.4}
+.or-actions{display:flex;gap:8px;flex-wrap:wrap}
+.or-btn{background:#12202f;color:#dcebfa;border:1px solid #2b3f57;border-radius:9px;padding:8px 13px;font:600 .76rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}.or-btn:hover{background:#1a2d42}
+.or-btn.go{background:#e8873a;border-color:#e8873a;color:#1a0d02}.or-btn.go:hover{filter:brightness(1.1)}.or-btn.big{width:100%;padding:11px;font-size:.88rem;margin-top:8px}
+.or-hint{padding:16px 6px;color:#b9c8d9;font-size:.84rem;line-height:1.55}.or-hint h3{margin:0 0 8px;color:#fff}
+.or-sh{display:grid;gap:6px;margin:8px 0}.or-sh label{display:block;background:#0f1a28;border:1px solid #1d2b3d;border-radius:8px;padding:8px 10px;font-size:.78rem;cursor:pointer}.or-sh label.dis{opacity:.45;cursor:not-allowed}
+.or-sh span{color:#ffb03c;margin-left:4px}.or-sh small{display:block;color:#8fa0b4;margin:2px 0 0 22px;font-size:.68rem}
+.or-dec{height:6px;background:#16222f;border-radius:3px;overflow:hidden;margin:6px 0 10px}.or-dec i{display:block;height:100%;width:0;background:#17a9f0}
+.or-acts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.or-act{background:#0f1a28;color:#e6eef8;border:1px solid #2b3f57;border-radius:9px;padding:11px 8px;font:600 .82rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}.or-act kbd{margin-right:6px;font-size:.66rem}
+.or-act.on{background:#17a9f0;color:#02131f;border-color:#17a9f0}.or-act.warn{border-color:#ff5d4d}
+.or-ctl{display:flex;gap:6px;margin-top:10px}
+.or-met{display:grid;gap:10px}.or-m span{font-size:.76rem;color:#cfe0f2}.or-m b{color:#fff}.or-m em{font-style:normal;font-size:.68rem;margin-left:4px}
+.t-nominal{color:#7be8a0}.t-elevated{color:#ffd27a}.t-emergency{color:#ff8a7f}
+.or-pb{height:7px;background:#16222f;border-radius:4px;margin-top:4px;overflow:hidden}.or-pb i{display:block;height:100%;background:#35d08a;width:0;transition:width .25s}.or-pb i.warn{background:#ffb224}.or-pb i.bad{background:#ff5d4d}
+.or-log{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:.74rem;color:#b9c8d9}.or-log li{padding:5px 8px;border-radius:6px;background:#0f1a28}.or-log li.bad{background:rgba(255,93,77,.2);color:#ffc2bb}.or-log li.warn{background:rgba(255,178,36,.16);color:#ffe0a0}.or-log li.good{background:rgba(53,208,138,.16);color:#a6f0c4}
+.or-end{text-align:center}.or-grade{font:800 3.6rem/1 'Segoe UI',system-ui,sans-serif;margin:4px 0;color:#ffb03c}.or-grade.gS{color:#7be8a0}.or-grade.gD{color:#ff8a7f}
+body.orion-open #nv-demo{display:none}
+@media (max-width:1100px){.or-body{grid-template-columns:1fr}.or-side{border-left:0;border-top:1px solid #1b2634;max-height:55vh}.or-h{gap:10px}.or-layers{margin-left:0}}
+@media (prefers-reduced-motion:reduce){.or-pb i{transition:none}}

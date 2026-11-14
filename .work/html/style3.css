@@ -1,0 +1,46 @@
+/* v1.4 panels: Data & Validation, Crew & Missions, Teach, Explain */
+.exb{background:rgba(23,169,240,.16);color:#bfe6ff;border:1px solid rgba(23,169,240,.5);border-radius:999px;min-width:20px;height:20px;padding:0 6px;font:700 .68rem 'Segoe UI',system-ui,sans-serif;cursor:pointer;line-height:1;vertical-align:middle;margin-inline-start:4px}
+.exb:hover{background:rgba(23,169,240,.4)}.exb.wide{height:auto;padding:5px 11px;font-size:.72rem;margin:0}
+.exrow{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 14px}
+.langwrap select{width:auto;padding:5px 8px;border-radius:999px;font-size:.78rem}
+#chart,#tl,#hmc,#hist{direction:ltr}
+[dir=rtl] .title,[dir=rtl] .cap,[dir=rtl] .path,[dir=rtl] .proto{text-align:right}
+[dir=rtl] .f label b{direction:ltr}
+.pn{position:fixed;inset:0;z-index:16;display:flex;flex-direction:column;background:radial-gradient(90% 60% at 15% -10%,rgba(23,169,240,.14),transparent 60%),#05090f;color:#f1f5fa;font-family:'Segoe UI',system-ui,sans-serif}
+.pn[hidden]{display:none}
+.pn-h{display:flex;align-items:center;gap:14px;padding:12px 20px;border-bottom:1px solid #1b2634;background:rgba(5,9,15,.92);flex-wrap:wrap}
+.pn-t{font-size:1.25rem;font-weight:700}.pn-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-inline-start:auto}
+.pn-tabs button{background:#0c1521;color:#cfe0f2;border:1px solid #243449;border-radius:8px;padding:7px 14px;font:600 .8rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}
+.pn-tabs button[aria-selected=true]{background:#17a9f0;color:#02131f;border-color:#17a9f0}
+.pn-x{background:transparent;color:#cfe0f2;border:1px solid #33445c;border-radius:8px;padding:7px 12px;font:600 .78rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}
+.pn-b{flex:1;min-height:0;overflow:auto;padding:18px 22px 120px;max-width:1100px;width:100%;margin:0 auto}
+.pn h3{margin:0 0 6px;font-size:1.05rem}.pn h4{margin:16px 0 6px;font-size:.92rem;color:#cfe0f2}
+.pn p,.pn li{font-size:.84rem;line-height:1.55;color:#c4d2e2}.pn .fine{font-size:.72rem;color:#8fa0b4;line-height:1.45}
+.pn .card{border:1px solid #1d2b3d;border-radius:10px;background:#0b131e;padding:14px 16px;margin:10px 0}
+.pn table{width:100%;border-collapse:collapse;font-size:.8rem;margin:6px 0}
+.pn th,.pn td{padding:7px 9px;border-bottom:1px solid #182433;text-align:start;vertical-align:top}.pn th{color:#8fa0b4;font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}
+.pn td.num{font-variant-numeric:tabular-nums;text-align:end}
+.pn input[type=text],.pn input[type=number],.pn textarea,.pn select{background:#0f1a28;border:1px solid #2b3f57;color:#e8f0f9;border-radius:7px;padding:6px 8px;font:inherit;font-size:.8rem}
+.pn textarea{width:100%;min-height:150px;font:12px ui-monospace,Consolas,monospace}
+.pn button.b{background:#12202f;color:#dcebfa;border:1px solid #2b3f57;border-radius:8px;padding:7px 13px;font:600 .78rem 'Segoe UI',system-ui,sans-serif;cursor:pointer;margin:2px}
+.pn button.b:hover{background:#1a2d42}.pn button.b.go{background:#17a9f0;color:#02131f;border-color:#17a9f0}.pn button.b.red{border-color:#ff5d4d;color:#ffc2bb}
+.badge2{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:999px;vertical-align:middle}
+.bd-live{background:rgba(53,208,138,.22);color:#7be8a0}.bd-cache{background:rgba(255,178,36,.2);color:#ffd27a}.bd-bundled{background:rgba(143,160,180,.22);color:#c4d2e2}.bd-assumed{background:rgba(199,146,255,.2);color:#e0c4ff}.bd-pass{background:rgba(53,208,138,.22);color:#7be8a0}.bd-warn{background:rgba(255,178,36,.2);color:#ffd27a}.bd-info{background:rgba(23,169,240,.2);color:#9fdcff}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:8px 0}.kv div{background:#0f1a28;border-radius:8px;padding:9px 10px}.kv b{display:block;font-size:1.15rem;font-variant-numeric:tabular-nums}.kv span{font-size:.68rem;color:#8fa0b4}
+.t-n{color:#7be8a0}.t-e{color:#ffd27a}.t-x{color:#ff8a7f}
+.pn svg{max-width:100%;height:auto;direction:ltr}.pn svg text{fill:#a9b8c9;font-size:10px;font-family:inherit}
+.pn .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0}
+.bar-in{height:8px;border-radius:4px;background:#16222f;overflow:hidden;min-width:70px}.bar-in i{display:block;height:100%}
+.xp{position:fixed;inset:0;z-index:45;background:rgba(2,5,10,.78);display:grid;place-items:center;padding:16px}.xp[hidden]{display:none}
+.xp-c{background:#0b131e;border:1px solid #2b3f57;border-radius:14px;max-width:640px;width:100%;max-height:88vh;overflow:auto;padding:20px 22px;color:#e8f0f9}
+.xp-c h3{margin:0 0 8px;font-size:1.15rem}.xp-c p,.xp-c li{font-size:.86rem;line-height:1.6;color:#c4d2e2}.xp-c code{background:#101c2b;border-radius:5px;padding:1px 6px;font-size:.8rem;color:#bfe6ff}
+.xp-c .eq{background:#0f1a28;border-radius:8px;padding:10px 12px;font:12.5px/1.7 ui-monospace,Consolas,monospace;color:#d9e8f8;direction:ltr;text-align:left;overflow:auto}
+.xp-c .own{font-size:.7rem;color:#8fa0b4;margin-top:10px}
+#tc{position:fixed;left:16px;bottom:16px;z-index:21;width:min(380px,calc(100vw - 32px));background:#0b131e;border:1px solid #17a9f0;border-radius:14px;padding:14px 16px;color:#e8f0f9;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+#tc[hidden]{display:none}#tc h4{margin:0 0 2px;font-size:.78rem;color:#7fd1ff;text-transform:uppercase;letter-spacing:.08em}#tc .tt{font-weight:700;margin-bottom:6px}#tc p{margin:6px 0;font-size:.84rem;line-height:1.5;color:#d3e0ee}
+#tc .dots{display:flex;gap:5px;margin:8px 0}#tc .dots i{width:22px;height:5px;border-radius:3px;background:#1d2b3d}#tc .dots i.on{background:#17a9f0}#tc .dots i.ok{background:#35d08a}
+#tc .q label{display:block;background:#0f1a28;border:1px solid #223247;border-radius:8px;padding:7px 9px;margin:5px 0;font-size:.8rem;cursor:pointer}#tc .q label.good{border-color:#35d08a}#tc .q label.bad{border-color:#ff5d4d}
+#tc .acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}#tc button{background:#12202f;color:#dcebfa;border:1px solid #2b3f57;border-radius:8px;padding:6px 12px;font:600 .76rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}#tc button.go{background:#17a9f0;color:#02131f;border-color:#17a9f0}
+@media (max-width:900px){.pn-b{padding:14px 12px 120px}}
+
+[dir=rtl] .m .v{direction:ltr;text-align:right}
