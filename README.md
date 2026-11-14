@@ -4,7 +4,9 @@ An offline-first, single-file web app that shows how space radiation, heart-rate
 
 > **Research prototype, not a medical device.** All crew data in the app is simulated or assumed. The project is independent and is not affiliated with or endorsed by NASA.
 
-**How to run:** double-click `Frontend/index.html`. No server, no install, no internet needed.
+🌐 **Live demo:** [https://ed3olnaneksab.vercel.app/](https://ed3olnaneksab.vercel.app/)
+
+**Run it locally:** double-click `Frontend/index.html`. No server, no install, no internet needed.
 
 ---
 
@@ -113,7 +115,6 @@ Ed3olna-Neksab/
 │   └── 05-data-validation-space-weather.png
 └── Frontend/
     ├── index.html                The whole app: HTML, CSS, JavaScript, logos and the offline bridge (~1.1 MB)
-
 ```
 
 Only `Frontend/index.html` is needed to run the app. The two original files are kept in the folder for reference and can be deleted.
