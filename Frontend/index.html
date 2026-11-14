@@ -73,7 +73,7 @@ h5{margin:0 0 8px;font-size:1rem}
 #tl text,#hm text{fill:#a3bccf;font-size:10px;font-family:inherit}#tl .t{fill:#e6ecf5;font-weight:600}
 #hmc{width:100%;display:block;border-radius:4px}.leg{font-size:.7rem;color:var(--muted);margin-top:4px}
 @media (max-width:900px){.row2{grid-template-columns:1fr}}
-@media (max-width:900px){#app{grid-template-columns:1fr;overflow:auto;position:static}html,body{overflow:auto}.cols{grid-template-columns:1fr}}
+@media (max-width:900px){#app{grid-template-columns:1fr;overflow:visible;position:relative;z-index:5;min-height:100%}#app:not(.on){height:100vh;overflow:hidden}html,body{overflow-x:hidden;overflow-y:auto;height:auto;min-height:100%}.cols{grid-template-columns:1fr}#splash{padding:16px 16px 90px}#splash>*{max-width:calc(100vw - 32px)}#splash .foot{left:12px;right:12px}}
 .tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .tb{background:rgba(96,193,229,.14);color:#d3f1f8;border:1px solid rgba(96,193,229,.45);border-radius:999px;padding:.42rem .95rem;font:600 .78rem 'Segoe UI',system-ui,sans-serif;cursor:pointer}
 .tb:hover{background:rgba(96,193,229,.28)}.tb.go{background:var(--cyan);color:#0c182a;border-color:var(--cyan)}
@@ -157,7 +157,7 @@ kbd{background:#24476f;border:1px solid #35628f;border-radius:5px;padding:1px 7p
 #nv-demo .bar{height:5px;background:#24476f;border-radius:3px;overflow:hidden}#nv-demo .bar i{display:block;height:100%;background:var(--glow);width:0}
 #nv-demo .earth{font:600 .8rem ui-monospace,Consolas,monospace;color:#dbe9fa}
 #nv-demo .ok{color:#7be8a0;font-weight:700;font-size:.85rem}
-@media (max-width:900px){#nv-cap{max-width:calc(100vw - 32px);bottom:80px}}
+@media (max-width:900px){#nv-cap{max-width:calc(100vw - 32px);width:max-content;bottom:104px}#nv-fabtxt{display:none!important}}
 </style>
 <style>/* ORION atlas + game. Original design in the app's own space-console style. Motion is minimal and respects reduced-motion. */
 .or{position:fixed;inset:0;z-index:15;display:flex;flex-direction:column;background:radial-gradient(90% 60% at 20% -10%,rgba(232,135,58,.16),transparent 60%),radial-gradient(70% 50% at 100% 110%,rgba(96,193,229,.12),transparent 60%),#0c182a;color:#f1f5fa;font-family:'Segoe UI',system-ui,sans-serif}
