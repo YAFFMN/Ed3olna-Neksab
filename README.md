@@ -113,8 +113,7 @@ Ed3olna-Neksab/
 │   └── 05-data-validation-space-weather.png
 └── Frontend/
     ├── index.html                The whole app: HTML, CSS, JavaScript, logos and the offline bridge (~1.1 MB)
-    ├── rcpt-backend.js           Original file, now merged into index.html (no longer needed)
-    └── rcpt-theme.css            Original file, now merged into index.html (no longer needed)
+
 ```
 
 Only `Frontend/index.html` is needed to run the app. The two original files are kept in the folder for reference and can be deleted.
