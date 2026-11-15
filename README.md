@@ -1,10 +1,10 @@
-# Ed3olna Neksab — Radiation-Coupled Physiological Twin
+# Radiation-Coupled Physiological Twin
 
 An offline-first, single-file web app that shows how space radiation, heart-rate variability (HRV) and sleep debt combine into one crew health risk score during a Moon-to-Mars mission.
 
 > **Research prototype, not a medical device.** All crew data in the app is simulated or assumed. The project is independent and is not affiliated with or endorsed by NASA.
 
-🌐 **Live demo:** [https://ed3olnaneksab.vercel.app/](https://ed3olnaneksab.vercel.app/)
+🌐 **Live demo:** [https://rcptuntitled.vercel.app/](https://rcptuntitled.vercel.app/)
 
 **Run it locally:** double-click `Frontend/index.html`. No server, no install, no internet needed.
 
