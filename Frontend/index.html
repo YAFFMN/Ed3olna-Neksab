@@ -413,7 +413,7 @@ body.orion-open #nv-demo{display:none}
     },
     ar: {
       splash_a: 'التوأم الفسيولوجي', splash_b: 'المقترن بالإشعاع', splash_p: 'نظام صحي للفضاء العميق يعمل دون اتصال، لمهمات أرتميس والمريخ.', launch: 'ابدأ المهمة',
-      splash_foot: 'مشاركة في NASA Space Apps Challenge 2026 · نموذج بحثي وليس جهازًا طبيًا · مشروع مستقل لا يتبع ناسا ولا تؤيده',
+      splash_foot: 'نموذج بحثي وليس جهازًا طبيًا · مشروع مستقل لا يتبع ناسا ولا تؤيده',
       sensor: 'تدفق بيانات المستشعرات', scen: 'سيناريو المحاكاة', sc_nom: 'مدار طبيعي', sc_sleep: 'نقص النوم مع عبء عمل مرتفع', sc_spe: 'حدث جسيمات شمسية حاد',
       lbl_d: 'معدل الإشعاع المحيط (ملي سيفرت/ساعة)', lbl_h: 'تقلب معدل ضربات القلب (مللي ثانية)', lbl_s: 'دَين النوم التراكمي (ساعات)',
       run: '▶ شغّل محاكاة العاصفة 40 ساعة', stop: '■ أوقف المحاكاة', clock_manual: 'ساعة المهمة: يدوي', clock_h: 'ساعة المهمة: الساعة {h} / 40', clock_onset: ' (بداية العاصفة عند 12)', offline: 'وضع محلي دون اتصال',
@@ -439,7 +439,7 @@ body.orion-open #nv-demo{display:none}
     },
     es: {
       splash_a: 'Gemelo Fisiológico', splash_b: 'Acoplado a la Radiación', splash_p: 'Un sistema de salud para el espacio profundo que funciona sin conexión, para misiones Artemis y a Marte.', launch: 'Iniciar misión',
-      splash_foot: 'Proyecto para NASA Space Apps Challenge 2026 · Prototipo de investigación, no es un dispositivo médico · Proyecto independiente, sin relación con la NASA',
+      splash_foot: 'Prototipo de investigación, no es un dispositivo médico · Proyecto independiente, sin relación con la NASA',
       sensor: 'Flujo de sensores', scen: 'Escenario de simulación', sc_nom: 'Órbita nominal', sc_sleep: 'Falta de sueño y carga alta', sc_spe: 'Evento agudo de partículas solares',
       lbl_d: 'Tasa de radiación ambiente (mSv/h)', lbl_h: 'Variabilidad de frecuencia cardíaca (ms)', lbl_s: 'Deuda de sueño acumulada (h)',
       run: '▶ Simular tormenta de 40 h', stop: '■ Detener simulación', clock_manual: 'Reloj de misión: manual', clock_h: 'Reloj de misión: hora {h} / 40', clock_onset: ' (inicio de la tormenta en 12)', offline: 'MODO LOCAL SIN CONEXIÓN',
@@ -1043,7 +1043,7 @@ window.NOVA_KB = {
     { id: 'real', re: /\b(are you (a )?(real|alive|human|robot|ai|bot|person|machine|sentient)|do you (have|feel) (feelings|emotions)|do you sleep|do you eat)\b/i,
       a: 'I\'m a software companion on your screen, not a person and not a physical robot. I don\'t sleep or eat, but I\'m glad to keep you company, {U}.' },
     { id: 'maker', re: /\b(who (made|built|created|designed|programmed) you|where are you from|who owns you|are you (from )?nasa)\b/i,
-      a: 'I live inside this app. It\'s an independent project made for the NASA Space Apps Challenge 2026, not made by or affiliated with NASA.' },
+      a: 'I live inside this app.not made by or affiliated with NASA.' },
     { id: 'likemars', re: /\b(do you like mars|favou?rite planet|favou?rite place)\b/i, a: 'Mars, definitely. It\'s my favourite place I\'ll never visit, {U}.' },
     { id: 'joke', re: /\b(joke|funny|make me laugh|cheer me up)\b/i, a: null },
     { id: 'love', re: /\b(i love you|love you|you('re| are) (great|awesome|amazing|cute|the best|nice|smart|good))\b/i, a: 'Aww. Thank you, {U}. My heart-light just glowed a little brighter.', mood: 'happy' },
@@ -1219,7 +1219,7 @@ function closeModal(){if(openM){openM.hidden=true;openM=null;if(lastFocus&&lastF
 document.addEventListener('keydown',function(e){if(!openM||e.key!=='Tab')return;var f=[].slice.call(openM.querySelectorAll('input,select,button,a[href]')).filter(function(x){return !x.disabled});if(!f.length)return;var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){z.focus();e.preventDefault()}else if(!e.shiftKey&&document.activeElement===z){a.focus();e.preventDefault()}});
 
 modal('nv-about','<button class="nv-ib x" type="button" data-close aria-label="Close">&#10005;</button><h3>About RCPT</h3>'+
- '<p><b>Radiation-Coupled Physiological Twin</b> is an offline-first concept for Moon-to-Mars crew health, built for the NASA Space Apps Challenge 2026.</p>'+
+ '<p><b>Radiation-Coupled Physiological Twin</b> is an offline-first concept for Moon-to-Mars crew health</p>'+
  '<p>v1.5 adds image assessment (rule-based cues, not a diagnosis), the crew avatar, the Earth-Mars ground link and daily wellness quests.</p>'+
  '<h4>How the number is made</h4><p>R = 0.40&middot;radiation + 0.35&middot;HRV strain + 0.25&middot;sleep debt + interaction. Interaction = 0.05&middot;dose&middot;sleep debt + 0.03&middot;dose&middot;HRV strain. The &minus;4.2/+4.8 interval is a fixed band, not a statistical posterior. Elevated at 35, emergency at 70 or 10 mSv/hr.</p>'+
  '<h4>What is simulated, and what is real</h4><p>Every crew input (radiation, HRV, sleep debt, the 40 h storm, the demo story, the shelter reduction) is simulated or assumed. Nothing here is a mission measurement. The real parts: the Mars dose model is calibrated to Curiosity\'s published 0.64 mSv/day, and Data &amp; Validation can show NOAA\'s proton-flux feed (live, cached or a bundled reference, always labelled). The Validation tab shows where the model is wrong. The physiological weights are not validated.</p>'+
